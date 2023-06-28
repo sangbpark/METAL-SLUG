@@ -10,6 +10,15 @@
     <Filter Include="Windows\Resource">
       <UniqueIdentifier>{1592b4e4-cc1d-42d0-9420-ff754579d1ca}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Engine">
+      <UniqueIdentifier>{66b14f13-997e-4cd9-a2d2-a7fc359f41ea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Common">
+      <UniqueIdentifier>{c89ac545-816b-4970-ae26-25e3890220f5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\High Level interface">
+      <UniqueIdentifier>{fa501b30-b329-4644-a6fe-a34d1cd0199c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h">
@@ -24,6 +33,15 @@
     <ClInclude Include="targetver.h">
       <Filter>Windows\Header</Filter>
     </ClInclude>
+    <ClInclude Include="Commoninclude.h">
+      <Filter>Engine\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="sbApplication.h">
+      <Filter>Engine\High Level interface</Filter>
+    </ClInclude>
+    <ClInclude Include="sbMath.h">
+      <Filter>Engine\Common</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="METAL SLUG.ico">
@@ -35,6 +53,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="sbApplication.cpp">
+      <Filter>Engine\High Level interface</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="METAL SLUG.rc">

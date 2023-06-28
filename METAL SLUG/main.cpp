@@ -3,6 +3,7 @@
 
 #include "framework.h"
 #include "METAL SLUG.h"
+#include "sbApplication.h"  // 내가 만든 헤더 추가
 
 #define MAX_LOADSTRING 100
 
@@ -10,6 +11,7 @@
 HINSTANCE hInst;                                // 현재 인스턴스입니다.
 WCHAR szTitle[MAX_LOADSTRING];                  // 제목 표시줄 텍스트입니다.
 WCHAR szWindowClass[MAX_LOADSTRING];            // 기본 창 클래스 이름입니다.
+sb::Application application;                   // 내가 만든application 추가 
 
 // 이 코드 모듈에 포함된 함수의 선언을 전달합니다:
 ATOM                MyRegisterClass(HINSTANCE hInstance);
@@ -53,12 +55,13 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
             if (!TranslateAccelerator(msg.hwnd, hAccelTable, &msg))
             {
                 TranslateMessage(&msg);
-                DispatchMessageW(&msg);
+                DispatchMessage(&msg);
             }
         }
         else
         {
-
+            // 게임 로직
+            application.Run(); // update render 반복 프레임
         }
     }
 
@@ -93,7 +96,7 @@ ATOM MyRegisterClass(HINSTANCE hInstance)
     wcex.hCursor        = LoadCursor(nullptr, IDC_ARROW);
     wcex.hbrBackground  = (HBRUSH)(COLOR_WINDOW+1);
     wcex.lpszMenuName   = MAKEINTRESOURCEW(IDC_METALSLUG);
-    wcex.lpszClassName  = L"METAL SLUG";
+    wcex.lpszClassName  = szWindowClass;
     wcex.hIconSm        = LoadIcon(wcex.hInstance, MAKEINTRESOURCE(IDI_SMALL));
 
     return RegisterClassExW(&wcex);
@@ -113,8 +116,10 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
 {
    hInst = hInstance; // 인스턴스 핸들을 전역 변수에 저장합니다.
 
-   HWND hWnd = CreateWindowW(L"METAL SLUG", L"METAL SLUG", WS_OVERLAPPEDWINDOW,
+   HWND hWnd = CreateWindowW(szWindowClass, szTitle, WS_OVERLAPPEDWINDOW,
       0, 0, 1920, 1080, nullptr, nullptr, hInstance, nullptr);
+
+   application.Initialize(hWnd);
 
    if (!hWnd)
    {
@@ -135,7 +140,7 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
 //  WM_COMMAND  - 애플리케이션 메뉴를 처리합니다.
 //  WM_PAINT    - 주 창을 그립니다.
 //  WM_DESTROY  - 종료 메시지를 게시하고 반환합니다.
-//
+//  
 //
 LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 {
@@ -162,26 +167,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
         {
             PAINTSTRUCT ps;
             HDC hdc = BeginPaint(hWnd, &ps);
-            
-            // 타이틀
-            Rectangle(hdc, 430, 10, 1530, 140);
-            // 캐릭터 창
-            Rectangle(hdc, 350, 250, 650, 750);
-            Rectangle(hdc, 660, 250, 960, 750);
-            Rectangle(hdc, 970, 250, 1270, 750);
-            Rectangle(hdc, 1280, 250, 1580, 750);
-            // 캐릭터 이름
-            Rectangle(hdc, 375, 760, 625, 860);
-            Rectangle(hdc, 685, 760, 935, 860);
-            Rectangle(hdc, 995, 760, 1245, 860);
-            Rectangle(hdc, 1305, 760, 1555, 860);
-           
-            // 플레이어
-            Rectangle(hdc, 400, 150, 600 , 240);
-            Rectangle(hdc, 710, 150, 910, 240);
-            Rectangle(hdc, 1020, 150, 1220, 240);
-            Rectangle(hdc, 1330, 150, 1530, 240);
-            // TODO: 여기에 hdc를 사용하는 그리기 코드를 추가합니다...
+       
 
             EndPaint(hWnd, &ps);
         }
