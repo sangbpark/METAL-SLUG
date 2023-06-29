@@ -133,6 +133,7 @@
     <ClInclude Include="METAL SLUG.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="sbApplication.h" />
+    <ClInclude Include="sbInput.h" />
     <ClInclude Include="targetver.h" />
     <ClInclude Include="Commoninclude.h" />
     <ClInclude Include="sbMath.h" />
@@ -142,6 +143,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="sbApplication.cpp" />
+    <ClCompile Include="sbInput.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="METAL SLUG.rc" />

@@ -19,6 +19,9 @@
     <Filter Include="Engine\High Level interface">
       <UniqueIdentifier>{fa501b30-b329-4644-a6fe-a34d1cd0199c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Engine\Input">
+      <UniqueIdentifier>{98750d9b-5f1b-440c-8eb8-8e7e14a6505b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h">
@@ -42,6 +45,9 @@
     <ClInclude Include="sbMath.h">
       <Filter>Engine\Common</Filter>
     </ClInclude>
+    <ClInclude Include="sbInput.h">
+      <Filter>Engine\Input</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="METAL SLUG.ico">
@@ -55,6 +61,9 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="sbApplication.cpp">
       <Filter>Engine\High Level interface</Filter>
+    </ClCompile>
+    <ClCompile Include="sbInput.cpp">
+      <Filter>Engine\Input</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

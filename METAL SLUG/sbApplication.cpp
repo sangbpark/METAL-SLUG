@@ -1,4 +1,5 @@
 #include "sbApplication.h"
+#include "sbInput.h"
 
 namespace sb
 {
@@ -14,6 +15,8 @@ namespace sb
 	{
 		mHwnd = hWnd;
 		mHdc = GetDC(mHwnd);
+
+		Input::Initailize();
 	}
 	void Application::Run()
 	{
@@ -22,26 +25,24 @@ namespace sb
 	}
 	void Application::Update()
 	{
-		if (GetAsyncKeyState(VK_LEFT) & 0x8000)
-		{
-			mPlayerControl.x -= 0.01f;
-		}
+		Input::Update();
 
-		if (GetAsyncKeyState(VK_RIGHT) & 0x8000)
-		{
-			mPlayerControl.x += 0.01f;
-		}
-
-		if (GetAsyncKeyState(VK_UP) & 0x8000)
+		if (Input::GetKey(eKeyCode::W))
 		{
 			mPlayerControl.y -= 0.01f;
 		}
-
-		if (GetAsyncKeyState(VK_DOWN) & 0x8000)
+		if (Input::GetKey(eKeyCode::A))
+		{
+			mPlayerControl.x -= 0.01f;
+		}
+		if (Input::GetKey(eKeyCode::S))
 		{
 			mPlayerControl.y += 0.01f;
 		}
-
+		if (Input::GetKey(eKeyCode::D))
+		{
+			mPlayerControl.x += 0.01f;
+		}
 	}
 	void Application::Render()
 	{
