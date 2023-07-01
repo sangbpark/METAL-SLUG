@@ -1,6 +1,8 @@
 #pragma once
 #include "Commoninclude.h"
 #include "sbTime.h"
+#include <stdlib.h>
+#include <time.h>
 
 namespace sb
 {

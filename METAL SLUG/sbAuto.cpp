@@ -29,9 +29,24 @@ namespace sb
 
 		if (timecheck > 3.0f)
 		{
+			srand(time(NULL));
+			int RandomDirectx = 0;
+			int RandomDirecty = 0;
+
+			RandomDirectx = rand();
+			RandomDirecty = rand();
+			
 			Direct Direct = {};
-			Direct.Directx = false;
-			Direct.Directy = false;
+
+			if (RandomDirectx % 2 == 0)
+				Direct.Directx = false;
+			else if (RandomDirectx % 2 == 1)
+				Direct.Directx = true;
+
+			if (RandomDirecty % 2 == 0)
+				Direct.Directy = false;
+			else if (RandomDirecty % 2 == 1)
+				Direct.Directy = true;
 
 			mDirect.push_back(Direct);
 
