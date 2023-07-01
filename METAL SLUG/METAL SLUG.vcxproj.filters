@@ -22,6 +22,12 @@
     <Filter Include="Engine\Input">
       <UniqueIdentifier>{98750d9b-5f1b-440c-8eb8-8e7e14a6505b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Engine\Time">
+      <UniqueIdentifier>{ee6970c8-ebfe-4f6e-ad3c-8713d43db6ba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Auto Ellipse">
+      <UniqueIdentifier>{3d90480f-d243-45b4-9cb5-d83aaf9e8d16}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h">
@@ -48,6 +54,12 @@
     <ClInclude Include="sbInput.h">
       <Filter>Engine\Input</Filter>
     </ClInclude>
+    <ClInclude Include="sbTime.h">
+      <Filter>Engine\Time</Filter>
+    </ClInclude>
+    <ClInclude Include="sbAuto.h">
+      <Filter>Engine\Auto Ellipse</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="METAL SLUG.ico">
@@ -64,6 +76,12 @@
     </ClCompile>
     <ClCompile Include="sbInput.cpp">
       <Filter>Engine\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="sbTime.cpp">
+      <Filter>Engine\Time</Filter>
+    </ClCompile>
+    <ClCompile Include="sbAuto.cpp">
+      <Filter>Engine\Auto Ellipse</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

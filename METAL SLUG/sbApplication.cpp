@@ -1,8 +1,11 @@
 #include "sbApplication.h"
 #include "sbInput.h"
+#include "sbTime.h"
+#include "sbAuto.h"
 
 namespace sb
 {
+
 	Application::Application()
 		: mHwnd(NULL)
 		, mHdc(NULL)
@@ -16,7 +19,9 @@ namespace sb
 		mHwnd = hWnd;
 		mHdc = GetDC(mHwnd);
 
+		Time::Initailize();
 		Input::Initailize();
+		Auto::Initailize();
 	}
 	void Application::Run()
 	{
@@ -25,28 +30,14 @@ namespace sb
 	}
 	void Application::Update()
 	{
+		Time::Update();
 		Input::Update();
-
-		if (Input::GetKey(eKeyCode::W))
-		{
-			mPlayerControl.y -= 0.01f;
-		}
-		if (Input::GetKey(eKeyCode::A))
-		{
-			mPlayerControl.x -= 0.01f;
-		}
-		if (Input::GetKey(eKeyCode::S))
-		{
-			mPlayerControl.y += 0.01f;
-		}
-		if (Input::GetKey(eKeyCode::D))
-		{
-			mPlayerControl.x += 0.01f;
-		}
+		Auto::Update();
+	
 	}
 	void Application::Render()
 	{
-		Ellipse(mHdc, 100 + mPlayerControl.x, 100 + mPlayerControl.y
-			, 200 + mPlayerControl.x, 200 + mPlayerControl.y);
+		Time::Render(mHdc);
+		Auto::Render(mHdc);
 	}
 }
