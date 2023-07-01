@@ -10,9 +10,24 @@ namespace sb
 
 	void Auto::Initailize()
 	{
+		srand(time(NULL));
+		int RandomDirectx = 0;
+		int RandomDirecty = 0;
+
+		RandomDirectx = rand();
+		RandomDirecty = rand();
+
 		Direct Direct = {};
-		Direct.Directx = false;
-		Direct.Directy = false;
+
+		if (RandomDirectx % 2 == 0)
+			Direct.Directx = false;
+		else
+			Direct.Directx = true;
+
+		if (RandomDirecty % 2 == 0)
+			Direct.Directy = false;
+		else
+			Direct.Directy = true;
 
 		mDirect.push_back(Direct);
 
