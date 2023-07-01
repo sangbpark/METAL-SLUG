@@ -40,12 +40,12 @@ namespace sb
 
 			if (RandomDirectx % 2 == 0)
 				Direct.Directx = false;
-			else if (RandomDirectx % 2 == 1)
+			else
 				Direct.Directx = true;
 
 			if (RandomDirecty % 2 == 0)
 				Direct.Directy = false;
-			else if (RandomDirecty % 2 == 1)
+			else
 				Direct.Directy = true;
 
 			mDirect.push_back(Direct);
