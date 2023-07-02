@@ -15,6 +15,15 @@ namespace sb
 		endDisplayy = 900,
 
 	};
+
+	enum class SizeError
+	{
+		left = -100,
+		right = 115,
+		top,
+		bottom = 58 ,
+	};
+
 	class Auto
 	{
 	public:
@@ -24,12 +33,20 @@ namespace sb
 			bool Directy;
 		};
 
+		struct FirstPosition
+		{
+			float FirstPositionleft;
+			float FirstPositionright;
+			float FirstPositiontop;
+			float FirstPositionbottom;
+		};
+
 		static void Initailize();
 		static void Update();
 		static void Render(HDC hdc);
 	private:
 		static std::vector<Direct> mDirect;
-		
+		static std::vector< FirstPosition> mFirstPosition;
 		static std::vector<math::Vector2> mAuto;
 	};
 }

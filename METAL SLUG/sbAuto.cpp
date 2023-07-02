@@ -5,6 +5,7 @@ namespace sb
 {
 	std::vector<Auto::Direct> Auto::mDirect = {};
 	std::vector<math::Vector2> Auto::mAuto = {};
+	std::vector<Auto::FirstPosition> Auto::mFirstPosition;
 	static float timecheck = 0.0f;
 	static int cyclecount = 0;
 
@@ -13,6 +14,7 @@ namespace sb
 		srand(time(NULL));
 		int RandomDirectx = 0;
 		int RandomDirecty = 0;
+	
 
 		RandomDirectx = rand();
 		RandomDirecty = rand();
@@ -32,14 +34,24 @@ namespace sb
 		mDirect.push_back(Direct);
 
 		math::Vector2 Auto = {};
-		Auto.x = 0.0f;
-		Auto.y = 0.0f;
+		Auto.x;
+		Auto.y;
 		mAuto.push_back(Auto);
+
+		FirstPosition RF;
+		RF.FirstPositionleft = (rand() % 100) * 10 / 2;
+		RF.FirstPositionright = RF.FirstPositionleft + 100;
+		RF.FirstPositiontop = RF.FirstPositionleft;
+		RF.FirstPositionbottom = RF.FirstPositionleft + 100;
+
+		mFirstPosition.push_back(RF);
+
+
 	}
+
 	void Auto::Update()
 	{
-		
-		
+				
 		timecheck += Time::DeltaTime();
 
 		if (timecheck > 3.0f)
@@ -66,24 +78,33 @@ namespace sb
 			mDirect.push_back(Direct);
 
 			math::Vector2 Auto = {};
-			Auto.x = 0.0f;
-			Auto.y = 0.0f;
+			Auto.x;
+			Auto.y;
 			mAuto.push_back(Auto);
+
+			FirstPosition RF;
+			RF.FirstPositionleft = (rand() % 100) * 10 / 2;
+			RF.FirstPositionright = RF.FirstPositionleft + 100;
+			RF.FirstPositiontop = RF.FirstPositionleft;
+			RF.FirstPositionbottom = RF.FirstPositionleft + 100;
+
+			mFirstPosition.push_back(RF);
 
 			cyclecount += 1;
 			timecheck = 0.0f;
 		}
+
 		for (size_t i = 0; i <= cyclecount; i++) 
 		{
 			for (size_t e = 0; e <=	 cyclecount - i; e++) // °¡¼Ó
 			{
-				if (200 + mAuto[i].x > (int)DisplayResolution::endDisplayx)
+				if (mFirstPosition[i].FirstPositionleft +(int)SizeError::right + mAuto[i].x > (int)DisplayResolution::endDisplayx)
 					mDirect[i].Directx = true;
-				if (100 + mAuto[i].x < (int)DisplayResolution::startDisplayx)
+				if (mFirstPosition[i].FirstPositionright + (int)SizeError::left + mAuto[i].x < (int)DisplayResolution::startDisplayx)
 					mDirect[i].Directx = false;
-				if (258 + mAuto[i].y > (int)DisplayResolution::endDisplayy)
+				if (mFirstPosition[i].FirstPositionbottom + (int)SizeError::bottom + mAuto[i].y >(int)DisplayResolution::endDisplayy)
 					mDirect[i].Directy = true;
-				if (100 + mAuto[i].y < (int)DisplayResolution::startDisplayy)
+				if (mFirstPosition[i].FirstPositiontop + mAuto[i].y < (int)DisplayResolution::startDisplayy)
 					mDirect[i].Directy = false;
 
 				if (mDirect[i].Directx == true)
@@ -98,12 +119,13 @@ namespace sb
 		}
 
 	}
+
 	void Auto::Render(HDC hdc)
 	{
 		for (size_t i = 0; i <= cyclecount; i++)
 		{
-			Ellipse(hdc, 100 + mAuto[i].x, 100 + mAuto[i].y
-				, 200 + mAuto[i].x, 200 + mAuto[i].y);
+			Ellipse(hdc, mFirstPosition[i].FirstPositionleft + mAuto[i].x, mFirstPosition[i].FirstPositiontop + mAuto[i].y
+				, mFirstPosition[i].FirstPositionright + mAuto[i].x, mFirstPosition[i].FirstPositionbottom + mAuto[i].y);
 
 		}
 	}
