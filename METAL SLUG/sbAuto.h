@@ -18,9 +18,9 @@ namespace sb
 
 	enum class SizeError
 	{
-		left = -100,
-		right = 115,
-		top,
+		left = 0,
+		right = 15,
+		top = 0,
 		bottom = 58 ,
 	};
 

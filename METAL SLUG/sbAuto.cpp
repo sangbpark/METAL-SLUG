@@ -98,9 +98,9 @@ namespace sb
 		{
 			for (size_t e = 0; e <=	 cyclecount - i; e++) // °¡¼Ó
 			{
-				if (mFirstPosition[i].FirstPositionleft +(int)SizeError::right + mAuto[i].x > (int)DisplayResolution::endDisplayx)
+				if (mFirstPosition[i].FirstPositionright + (int)SizeError::right + mAuto[i].x > (int)DisplayResolution::endDisplayx)
 					mDirect[i].Directx = true;
-				if (mFirstPosition[i].FirstPositionright + (int)SizeError::left + mAuto[i].x < (int)DisplayResolution::startDisplayx)
+				if (mFirstPosition[i].FirstPositionleft + (int)SizeError::left + mAuto[i].x < (int)DisplayResolution::startDisplayx)
 					mDirect[i].Directx = false;
 				if (mFirstPosition[i].FirstPositionbottom + (int)SizeError::bottom + mAuto[i].y >(int)DisplayResolution::endDisplayy)
 					mDirect[i].Directy = true;
