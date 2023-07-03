@@ -6,8 +6,8 @@ namespace sb
 	std::vector<Auto::Direct> Auto::mDirect = {};
 	std::vector<math::Vector2> Auto::mAuto = {};
 	std::vector<Auto::FirstPosition> Auto::mFirstPosition;
-	static float timecheck = 0.0f;
-	static int cyclecount = 0;
+	float timecheck = 0.0f;
+	int cyclecount = 0;
 
 	void Auto::Initailize()
 	{
@@ -84,9 +84,9 @@ namespace sb
 
 			FirstPosition RF;
 			RF.FirstPositionleft = (rand() % 100) * 10 / 2;
-			RF.FirstPositionright = RF.FirstPositionleft + 100;
+			RF.FirstPositionright = RF.FirstPositionleft + (int)EllipseSize::Size;
 			RF.FirstPositiontop = RF.FirstPositionleft;
-			RF.FirstPositionbottom = RF.FirstPositionleft + 100;
+			RF.FirstPositionbottom = RF.FirstPositionleft + (int)EllipseSize::Size;
 
 			mFirstPosition.push_back(RF);
 
@@ -104,7 +104,7 @@ namespace sb
 					mDirect[i].Directx = false;
 				if (mFirstPosition[i].FirstPositionbottom + (int)SizeError::bottom + mAuto[i].y >(int)DisplayResolution::endDisplayy)
 					mDirect[i].Directy = true;
-				if (mFirstPosition[i].FirstPositiontop + mAuto[i].y < (int)DisplayResolution::startDisplayy)
+				if (mFirstPosition[i].FirstPositiontop + (int)SizeError::top + mAuto[i].y < (int)DisplayResolution::startDisplayy)
 					mDirect[i].Directy = false;
 
 				if (mDirect[i].Directx == true)
@@ -122,11 +122,19 @@ namespace sb
 
 	void Auto::Render(HDC hdc)
 	{
+		int ballcount = 0;
+		ballcount = cyclecount + 1;
+		wchar_t szFloat[50] = {};
+
+		swprintf_s(szFloat, 50, L"ball : %d", ballcount);
+		int strLen = wcsnlen_s(szFloat, 50);
+
+		TextOut(hdc, 10, 10, szFloat, strLen);
+
 		for (size_t i = 0; i <= cyclecount; i++)
 		{
 			Ellipse(hdc, mFirstPosition[i].FirstPositionleft + mAuto[i].x, mFirstPosition[i].FirstPositiontop + mAuto[i].y
 				, mFirstPosition[i].FirstPositionright + mAuto[i].x, mFirstPosition[i].FirstPositionbottom + mAuto[i].y);
-
 		}
 	}
 }

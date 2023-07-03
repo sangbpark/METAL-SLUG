@@ -37,7 +37,7 @@ namespace sb
 	}
 	void Application::Render()
 	{
-		Time::Render(mHdc);
+		
 		Auto::Render(mHdc);
 	}
 }

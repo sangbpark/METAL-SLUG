@@ -21,7 +21,11 @@ namespace sb
 		left = 0,
 		right = 15,
 		top = 0,
-		bottom = 58 ,
+		bottom = 55,
+	};
+	enum class EllipseSize
+	{
+		Size = 100,
 	};
 
 	class Auto
