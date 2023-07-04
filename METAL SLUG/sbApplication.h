@@ -19,6 +19,11 @@ namespace sb
 	private:
 		HWND mHwnd;
 		HDC mHdc;
+		UINT mWidth;
+		UINT mHeight;
+
+		HDC mBackHdc;
+		HBITMAP mBackBuffer;
 
 		Vector2 mPlayerControl;
 	};
