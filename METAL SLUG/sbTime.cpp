@@ -8,6 +8,7 @@ namespace sb
 	LARGE_INTEGER Time::mCurFrequency = {};
 	float Time::mDeltaTime = 0.0f;
 
+
 	void Time::Initailize()
 	{
 		QueryPerformanceFrequency(&mCpuFrequency);

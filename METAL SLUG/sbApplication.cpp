@@ -1,7 +1,7 @@
 #include "sbApplication.h"
 #include "sbInput.h"
 #include "sbTime.h"
-#include "sbAuto.h"
+
 
 namespace sb
 {
@@ -46,7 +46,10 @@ namespace sb
 
 		Time::Initailize();
 		Input::Initailize();
-		Auto::Initailize();
+
+		mScene = new Scene();
+		mScene->Initialize();
+		
 	}
 	void Application::Run()
 	{
@@ -57,14 +60,17 @@ namespace sb
 	{
 		Time::Update();
 		Input::Update();
-		Auto::Update();
+		
+		mScene->Update();
 	
 	}
 	void Application::Render()
 	{
 		Rectangle(mBackHdc, -1, -1, mWidth + 1, mHeight + 1);
 
-		Auto::Render(mBackHdc);
+		Time::Render(mBackHdc);
+		
+		mScene->Render(mBackHdc);
 
 		BitBlt(mHdc, 0, 0, mWidth, mHeight, mBackHdc, 0, 0, SRCCOPY);
 

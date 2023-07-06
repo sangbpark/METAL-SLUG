@@ -1,6 +1,6 @@
 #pragma once
 #include "Commoninclude.h"
-
+#include "sbScene.h"
 
 namespace sb
 {
@@ -25,7 +25,8 @@ namespace sb
 		HDC mBackHdc;
 		HBITMAP mBackBuffer;
 
-		Vector2 mPlayerControl;
+		Scene* mScene;
+		
 	};
 }
 

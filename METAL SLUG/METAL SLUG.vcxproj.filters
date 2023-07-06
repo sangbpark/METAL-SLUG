@@ -28,6 +28,27 @@
     <Filter Include="Engine\Auto Ellipse">
       <UniqueIdentifier>{3d90480f-d243-45b4-9cb5-d83aaf9e8d16}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Engine\Entity">
+      <UniqueIdentifier>{1f8bd229-5b1c-4d99-928e-14cef7047fc1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Scene">
+      <UniqueIdentifier>{d38e21f6-1563-41c3-9a2b-4640739ab49b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Layer">
+      <UniqueIdentifier>{e2a530dc-32dd-4226-9852-9e44713aa087}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\GameObject">
+      <UniqueIdentifier>{85ee1b04-8718-4940-8313-1a1d7b08abf2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Component">
+      <UniqueIdentifier>{0c2357c8-5d56-4e0a-a04e-3c0f839fe347}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Component\Transform">
+      <UniqueIdentifier>{20148a04-ca3c-48f5-ae4f-ee602cf0b7c4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Component\SpriteRenderer">
+      <UniqueIdentifier>{aa135c25-db04-4941-bce6-fc331446a0c8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h">
@@ -60,6 +81,27 @@
     <ClInclude Include="sbAuto.h">
       <Filter>Engine\Auto Ellipse</Filter>
     </ClInclude>
+    <ClInclude Include="sbEntity.h">
+      <Filter>Engine\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="sbScene.h">
+      <Filter>Engine\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="sbLayer.h">
+      <Filter>Engine\Layer</Filter>
+    </ClInclude>
+    <ClInclude Include="sbGameObject.h">
+      <Filter>Engine\GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="sbComponent.h">
+      <Filter>Engine\Component</Filter>
+    </ClInclude>
+    <ClInclude Include="sbTransform.h">
+      <Filter>Engine\Component\Transform</Filter>
+    </ClInclude>
+    <ClInclude Include="sbSpriteRenderer.h">
+      <Filter>Engine\Component\SpriteRenderer</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="METAL SLUG.ico">
@@ -82,6 +124,27 @@
     </ClCompile>
     <ClCompile Include="sbAuto.cpp">
       <Filter>Engine\Auto Ellipse</Filter>
+    </ClCompile>
+    <ClCompile Include="sbEntity.cpp">
+      <Filter>Engine\Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="sbScene.cpp">
+      <Filter>Engine\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="sbLayer.cpp">
+      <Filter>Engine\Layer</Filter>
+    </ClCompile>
+    <ClCompile Include="sbGameObject.cpp">
+      <Filter>Engine\GameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="sbComponent.cpp">
+      <Filter>Engine\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="sbTransform.cpp">
+      <Filter>Engine\Component\Transform</Filter>
+    </ClCompile>
+    <ClCompile Include="sbSpriteRenderer.cpp">
+      <Filter>Engine\Component\SpriteRenderer</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
