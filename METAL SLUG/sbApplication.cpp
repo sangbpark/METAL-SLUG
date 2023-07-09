@@ -1,6 +1,9 @@
 #include "sbApplication.h"
 #include "sbInput.h"
 #include "sbTime.h"
+#include "sbSceneMananger.h"
+#include "sbTitleScene.h"
+#include "sbSTAGE1.h"
 
 
 namespace sb
@@ -47,8 +50,8 @@ namespace sb
 		Time::Initailize();
 		Input::Initailize();
 
-		mScene = new Scene();
-		mScene->Initialize();
+		SceneMananger::Initialize();
+
 		
 	}
 	void Application::Run()
@@ -61,7 +64,7 @@ namespace sb
 		Time::Update();
 		Input::Update();
 		
-		mScene->Update();
+		SceneMananger::Update();
 	
 	}
 	void Application::Render()
@@ -70,9 +73,10 @@ namespace sb
 
 		Time::Render(mBackHdc);
 		
-		mScene->Render(mBackHdc);
+		SceneMananger::Render(mBackHdc);
 
-		BitBlt(mHdc, 0, 0, mWidth, mHeight, mBackHdc, 0, 0, SRCCOPY);
+		BitBlt(mHdc, 0, 0, mWidth, mHeight
+			, mBackHdc, 0, 0, SRCCOPY);
 
 	}
 }

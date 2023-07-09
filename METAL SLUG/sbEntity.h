@@ -10,7 +10,7 @@ namespace sb
 		Entity();
 		virtual ~Entity();
 
-		void SetName(std::wstring& name) { mName = name; }
+		void SetName(const std::wstring& name) { mName = name; }
 		std::wstring& GetName() { return mName; }
 
 	private:

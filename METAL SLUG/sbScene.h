@@ -15,6 +15,11 @@ namespace sb
 		virtual void Update();
 		virtual void Render(HDC hdc);
 
+		void AddGameObject(enums::eLayerType type, GameObject* gameObj)
+		{
+			mLayers[(int)type].AddGameObject(gameObj);
+		}
+
 	private:
 		std::vector<Layer> mLayers;
 	};

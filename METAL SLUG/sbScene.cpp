@@ -11,7 +11,7 @@ namespace sb
 	}
 	void Scene::Initialize()
 	{
-		mLayers[(int)enums::eLayerType::Player].AddGameObject();
+		
 	}
 	void Scene::Update()
 	{

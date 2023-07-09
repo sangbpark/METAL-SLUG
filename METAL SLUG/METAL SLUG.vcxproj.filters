@@ -49,6 +49,24 @@
     <Filter Include="Engine\Component\SpriteRenderer">
       <UniqueIdentifier>{aa135c25-db04-4941-bce6-fc331446a0c8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Content">
+      <UniqueIdentifier>{0a0fd048-a032-41c8-8fb5-644455f96527}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Content\Scene">
+      <UniqueIdentifier>{57198486-0b9e-46c8-ba04-6d5fdd791536}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Content\Scene\TitleScene">
+      <UniqueIdentifier>{698f39db-82e1-4c46-af80-7a854a88003e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Content\GameObejct">
+      <UniqueIdentifier>{3c732ea4-d978-4f48-a55d-c988f166c495}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Content\GameObejct\Player">
+      <UniqueIdentifier>{331f096b-1491-4247-9c5a-8bd367cb1681}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Content\Scene\STAGE1">
+      <UniqueIdentifier>{44282ea5-6802-4710-9c39-7732e37cd57c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h">
@@ -102,6 +120,21 @@
     <ClInclude Include="sbSpriteRenderer.h">
       <Filter>Engine\Component\SpriteRenderer</Filter>
     </ClInclude>
+    <ClInclude Include="sbSceneMananger.h">
+      <Filter>Engine\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="sbObject.h">
+      <Filter>Engine\GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="sbTitleScene.h">
+      <Filter>Content\Scene\TitleScene</Filter>
+    </ClInclude>
+    <ClInclude Include="sbPlayer.h">
+      <Filter>Content\GameObejct\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="sbSTAGE1.h">
+      <Filter>Content\Scene\STAGE1</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="METAL SLUG.ico">
@@ -145,6 +178,18 @@
     </ClCompile>
     <ClCompile Include="sbSpriteRenderer.cpp">
       <Filter>Engine\Component\SpriteRenderer</Filter>
+    </ClCompile>
+    <ClCompile Include="sbSceneMananger.cpp">
+      <Filter>Engine\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="sbTitleScene.cpp">
+      <Filter>Content\Scene\TitleScene</Filter>
+    </ClCompile>
+    <ClCompile Include="sbPlayer.cpp">
+      <Filter>Content\GameObejct\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="sbSTAGE1.cpp">
+      <Filter>Content\Scene\STAGE1</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

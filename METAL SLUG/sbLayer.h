@@ -14,10 +14,9 @@ namespace sb
 		virtual void Update();
 		virtual void Render(HDC hdc);
 
-		void AddGameObject()
+		void AddGameObject(GameObject* gameobj)
 		{
-			GameObject* obj = new GameObject();
-			mGameObjects.push_back(obj);
+			mGameObjects.push_back(gameobj);
 		}
 
 	private:
