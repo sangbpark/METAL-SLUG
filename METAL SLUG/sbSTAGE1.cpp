@@ -14,7 +14,7 @@ namespace sb
 	void STAGE1::Initialize()
 	{
 		Player* player = object::Instantiate<Player>(enums::eLayerType::Player);
-		player->AddCompotent<SpriteRenderer>();
+		player->AddComponent<SpriteRenderer>();
 	}
 	void STAGE1::Update()
 	{

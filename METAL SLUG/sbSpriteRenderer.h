@@ -1,5 +1,6 @@
 #pragma once
 #include "sbComponent.h"
+#include "sbImage.h"
 
 namespace sb
 {
@@ -13,8 +14,10 @@ namespace sb
 		virtual void Update() override;
 		virtual void Render(HDC hdc) override;
 
-	private:
+		void SetImage(Image* image) { mImage = image; }
 
+	private:
+		Image* mImage;
 	};
 }
 

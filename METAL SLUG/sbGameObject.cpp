@@ -8,7 +8,7 @@ namespace sb
 	{
 		//mComponents.push_back(new Transform());
 		//mComponents[0]->SetOwner(this);
-		AddCompotent<Transform>();
+		AddComponent<Transform>();
 		//mComponents.push_back(new SpriteRenderer());
 		//mComponents[1]->SetOwner(this);
 	}

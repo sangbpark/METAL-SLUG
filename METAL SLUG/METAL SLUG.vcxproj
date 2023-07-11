@@ -131,6 +131,7 @@
   <ItemGroup>
     <ClInclude Include="framework.h" />
     <ClInclude Include="METAL SLUG.h" />
+    <ClInclude Include="sbImage.h" />
     <ClInclude Include="sbObject.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="sbApplication.h" />
@@ -141,6 +142,8 @@
     <ClInclude Include="sbInput.h" />
     <ClInclude Include="sbLayer.h" />
     <ClInclude Include="sbPlayer.h" />
+    <ClInclude Include="sbResource.h" />
+    <ClInclude Include="sbResources.h" />
     <ClInclude Include="sbScene.h" />
     <ClInclude Include="sbSceneMananger.h" />
     <ClInclude Include="sbSpriteRenderer.h" />
@@ -161,9 +164,12 @@
     <ClCompile Include="sbComponent.cpp" />
     <ClCompile Include="sbEntity.cpp" />
     <ClCompile Include="sbGameObject.cpp" />
+    <ClCompile Include="sbImage.cpp" />
     <ClCompile Include="sbInput.cpp" />
     <ClCompile Include="sbLayer.cpp" />
     <ClCompile Include="sbPlayer.cpp" />
+    <ClCompile Include="sbResource.cpp" />
+    <ClCompile Include="sbResources.cpp" />
     <ClCompile Include="sbScene.cpp" />
     <ClCompile Include="sbSceneMananger.cpp" />
     <ClCompile Include="sbSpriteRenderer.cpp" />

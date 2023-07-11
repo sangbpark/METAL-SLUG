@@ -1,7 +1,9 @@
 #include "sbTitleScene.h"
 #include "sbPlayer.h"
-#include "sbObject.h"
 #include "sbSpriteRenderer.h"
+#include "sbObject.h"
+#include "sbImage.h"
+#include "sbResources.h"
 
 namespace sb
 {
@@ -13,8 +15,14 @@ namespace sb
 	}
 	void TitleScene::Initialize()
 	{
+		Image* image = Resources::Load<Image>(L"TitleCharacter"
+			, L"..\\Resource\\Character\\Fighter.bmp");
+		
 		Player* player = object::Instantiate<Player>(enums::eLayerType::Player);
-		player->AddCompotent<SpriteRenderer>();
+		SpriteRenderer* sr = player->AddComponent<SpriteRenderer>();
+		sr->SetImage(image);
+
+		std::wstring name = player->GetName();
 	}
 	void TitleScene::Update()
 	{
@@ -22,8 +30,6 @@ namespace sb
 	}
 	void TitleScene::Render(HDC hdc)
 	{
-		Ellipse(hdc, 500 , 500 
-			, 700  , 700 );
 		Scene::Render(hdc);
 	}
 }

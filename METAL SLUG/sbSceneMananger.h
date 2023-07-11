@@ -1,6 +1,6 @@
 #pragma once
 #include "sbScene.h"
-#include <queue>
+
 
 namespace sb
 {
@@ -20,7 +20,7 @@ namespace sb
 			mScene.insert(std::make_pair(name, scene));
 			mActiveScene = scene;
 			scene->Initialize();
-			mQueue.push(name);
+		
 			return scene;
 
 		}
@@ -28,19 +28,10 @@ namespace sb
 		static Scene* LoadScene(const std::wstring& name);
 		static Scene* GetActiveScene() { return mActiveScene; }
 
-		static std::wstring ChangeScene()
-		{
-			std::wstring name = mQueue.front();
-			mQueue.pop();
-			mQueue.push(name);
-		
-			return mQueue.front();
-		}
 
 	private:
 		static std::map<std::wstring, Scene* > mScene;
 		static Scene* mActiveScene;
-		static std::queue<std::wstring> mQueue;
 	};
 }
 

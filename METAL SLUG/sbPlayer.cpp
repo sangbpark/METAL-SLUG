@@ -18,7 +18,7 @@ namespace sb
 	{
 		GameObject::Update();
 
-		Transform* tr = GetCompotent<Transform>();
+		Transform* tr = GetComponent<Transform>();
 		math::Vector2 pos = tr->GetPosition();
 
 

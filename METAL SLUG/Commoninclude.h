@@ -5,9 +5,10 @@
 #include <set>
 #include <functional>
 #include <string>
-
 #include "framework.h"
 #include "sbMath.h"
+
+#pragma comment(lib, "Msimg32.lib")
 
 namespace sb::enums
 {

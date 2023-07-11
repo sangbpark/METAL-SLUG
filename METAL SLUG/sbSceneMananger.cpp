@@ -2,14 +2,13 @@
 #include "sbSTAGE1.h"
 #include "sbTitleScene.h"
 #include "sbInput.h"
-#include "sbTime.h"
+
 
 namespace sb
 {
 	std::map<std::wstring, Scene* > SceneMananger::mScene = {};
 	Scene* SceneMananger::mActiveScene = nullptr;
-	std::queue<std::wstring > SceneMananger::mQueue = {};
-	float timeCheck = 0.0f;
+
 
 	void SceneMananger::Initialize()
 	{
@@ -21,19 +20,7 @@ namespace sb
 
 	void SceneMananger::Update()
 	{
-		
-
-		timeCheck += Time::DeltaTime();
 	
-		if (Input::GetKey(eKeyCode::M))
-		{
-			if(timeCheck > 0.3f)
-			{
-				LoadScene(ChangeScene());
-				timeCheck = 0.0f;
-			}
-		}
-		
 		mActiveScene->Update();
 	}
 

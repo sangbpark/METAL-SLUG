@@ -67,6 +67,12 @@
     <Filter Include="Content\Scene\STAGE1">
       <UniqueIdentifier>{44282ea5-6802-4710-9c39-7732e37cd57c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Resource">
+      <UniqueIdentifier>{45c5a514-6d09-4d24-b396-7684f04aca5f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Image">
+      <UniqueIdentifier>{3ea1eae6-5f9f-435f-ae06-f208066e2091}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h">
@@ -135,6 +141,15 @@
     <ClInclude Include="sbSTAGE1.h">
       <Filter>Content\Scene\STAGE1</Filter>
     </ClInclude>
+    <ClInclude Include="sbResource.h">
+      <Filter>Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="sbResources.h">
+      <Filter>Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="sbImage.h">
+      <Filter>Image</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="METAL SLUG.ico">
@@ -190,6 +205,15 @@
     </ClCompile>
     <ClCompile Include="sbSTAGE1.cpp">
       <Filter>Content\Scene\STAGE1</Filter>
+    </ClCompile>
+    <ClCompile Include="sbResource.cpp">
+      <Filter>Resource</Filter>
+    </ClCompile>
+    <ClCompile Include="sbResources.cpp">
+      <Filter>Resource</Filter>
+    </ClCompile>
+    <ClCompile Include="sbImage.cpp">
+      <Filter>Image</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

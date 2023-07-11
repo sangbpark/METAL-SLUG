@@ -15,7 +15,7 @@ namespace sb
 		virtual void Render(HDC hdc);
 
 		template <typename T>
-		T* GetCompotent()
+		T* GetComponent()
 		{
 			T* comp = nullptr;
 			for (Component* c : mComponents)
@@ -29,7 +29,7 @@ namespace sb
 		}
 
 		template <typename T>
-		T* AddCompotent()
+		T* AddComponent()
 		{
 			T* comp = new T();
 			mComponents.push_back(comp);

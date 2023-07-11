@@ -19,10 +19,12 @@ namespace sb
 	}
 	void SpriteRenderer::Render(HDC hdc)
 	{
-		Transform* tr = GetOwner()->GetCompotent<Transform>();
+		Transform* tr = GetOwner()->GetComponent<Transform>();
 		math::Vector2 pos = tr->GetPosition();
-
-		Ellipse(hdc, 100 + pos.x, 100 + pos.y
-			, 200 + pos.x, 200 + pos.y);
+		
+		
+		StretchBlt(hdc, (int)pos.x, (int)pos.y
+			, mImage->GetWidth(), mImage->GetHeight()
+			, mImage->GetHdc(), 0, 0, mImage->GetWidth(), mImage->GetHeight(), SRCCOPY);
 	}
 }
