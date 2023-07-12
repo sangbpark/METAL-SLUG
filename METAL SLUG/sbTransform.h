@@ -3,6 +3,7 @@
 
 namespace sb
 {
+	using namespace math;
 	class Transform : public Component
 	{
 	public:
@@ -13,11 +14,11 @@ namespace sb
 		virtual void Update() override;
 		virtual void Render(HDC hdc) override;
 		
-		void SetPosition(math::Vector2 Postion) { mPosition = Postion; }
-		math::Vector2 GetPosition() { return mPosition; }
+		void SetPosition(Vector2 Postion) { mPosition = Postion; }
+		Vector2 GetPosition() { return mPosition; }
 
 	private:
-		math::Vector2 mPosition;
+		Vector2 mPosition;
 	};
 }
 

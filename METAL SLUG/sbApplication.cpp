@@ -1,9 +1,9 @@
 #include "sbApplication.h"
 #include "sbInput.h"
 #include "sbTime.h"
-#include "sbSceneMananger.h"
+#include "sbSceneManager.h"
 #include "sbTitleScene.h"
-#include "sbSTAGE1.h"
+#include "sbMission1.h"
 
 
 namespace sb
@@ -26,8 +26,8 @@ namespace sb
 		mHwnd = hWnd;
 		mHdc = GetDC(mHwnd);
 
-		mWidth = 1600;
-		mHeight = 900;
+		mWidth = 1325;
+		mHeight = 990;
 
 		RECT rect = { 0,0,mWidth,mHeight };
 		AdjustWindowRect(&rect, WS_OVERLAPPEDWINDOW, false);
@@ -50,7 +50,7 @@ namespace sb
 		Time::Initailize();
 		Input::Initailize();
 
-		SceneMananger::Initialize();
+		SceneManager::Initialize();
 
 		
 	}
@@ -64,7 +64,7 @@ namespace sb
 		Time::Update();
 		Input::Update();
 		
-		SceneMananger::Update();
+		SceneManager::Update();
 	
 	}
 	void Application::Render()
@@ -73,7 +73,7 @@ namespace sb
 
 		Time::Render(mBackHdc);
 		
-		SceneMananger::Render(mBackHdc);
+		SceneManager::Render(mBackHdc);
 
 		BitBlt(mHdc, 0, 0, mWidth, mHeight
 			, mBackHdc, 0, 0, SRCCOPY);

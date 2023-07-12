@@ -2,8 +2,10 @@
 #include "sbPlayer.h"
 #include "sbSpriteRenderer.h"
 #include "sbObject.h"
-#include "sbImage.h"
+#include "sbTexture.h"
 #include "sbResources.h"
+#include "sbBackGround.h"
+#include "sbInput.h"
 
 namespace sb
 {
@@ -15,18 +17,22 @@ namespace sb
 	}
 	void TitleScene::Initialize()
 	{
-		Image* image = Resources::Load<Image>(L"TitleCharacter"
-			, L"..\\Resource\\Character\\Fighter.bmp");
+		Texture* image = Resources::Load<Texture>(L"TitleBackGround"
+			, L"..\\Resource\\Title\\Metal Slug 2 Title Screen.png");
 		
-		Player* player = object::Instantiate<Player>(enums::eLayerType::Player);
-		SpriteRenderer* sr = player->AddComponent<SpriteRenderer>();
+		BackGround* TitleBackGround = object::Instantiate<BackGround>(enums::eLayerType::Backgroud);
+		SpriteRenderer* sr = TitleBackGround->AddComponent<SpriteRenderer>();
 		sr->SetImage(image);
-
-		std::wstring name = player->GetName();
+		sr->SetScale(Vector2(0.92f, 0.94f));
+	
 	}
 	void TitleScene::Update()
 	{
 		Scene::Update();
+		if (Input::GetKeyDown(eKeyCode::H))
+		{
+			SceneManager::LoadScene(L"Mission1");
+		}
 	}
 	void TitleScene::Render(HDC hdc)
 	{

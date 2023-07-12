@@ -11,7 +11,6 @@ namespace sb
 	}
 	void Scene::Initialize()
 	{
-		
 	}
 	void Scene::Update()
 	{

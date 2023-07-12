@@ -131,7 +131,10 @@
   <ItemGroup>
     <ClInclude Include="framework.h" />
     <ClInclude Include="METAL SLUG.h" />
-    <ClInclude Include="sbImage.h" />
+    <ClInclude Include="sbBackGround.h" />
+    <ClInclude Include="sbBGDesert.h" />
+    <ClInclude Include="sbBGMDesert.h" />
+    <ClInclude Include="sbTexture.h" />
     <ClInclude Include="sbObject.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="sbApplication.h" />
@@ -145,9 +148,9 @@
     <ClInclude Include="sbResource.h" />
     <ClInclude Include="sbResources.h" />
     <ClInclude Include="sbScene.h" />
-    <ClInclude Include="sbSceneMananger.h" />
+    <ClInclude Include="sbSceneManager.h" />
     <ClInclude Include="sbSpriteRenderer.h" />
-    <ClInclude Include="sbSTAGE1.h" />
+    <ClInclude Include="sbMission1.h" />
     <ClInclude Include="sbTime.h" />
     <ClInclude Include="sbTitleScene.h" />
     <ClInclude Include="sbTransform.h" />
@@ -161,19 +164,23 @@
     </ClCompile>
     <ClCompile Include="sbApplication.cpp" />
     <ClCompile Include="sbAuto.cpp" />
+    <ClCompile Include="sbBackGround.cpp" />
+    <ClCompile Include="sbBGDesert.cpp" />
+    <ClCompile Include="sbBGMDesert.cpp" />
     <ClCompile Include="sbComponent.cpp" />
     <ClCompile Include="sbEntity.cpp" />
     <ClCompile Include="sbGameObject.cpp" />
-    <ClCompile Include="sbImage.cpp" />
+    <ClCompile Include="sbMath.cpp" />
+    <ClCompile Include="sbTexture.cpp" />
     <ClCompile Include="sbInput.cpp" />
     <ClCompile Include="sbLayer.cpp" />
     <ClCompile Include="sbPlayer.cpp" />
     <ClCompile Include="sbResource.cpp" />
     <ClCompile Include="sbResources.cpp" />
     <ClCompile Include="sbScene.cpp" />
-    <ClCompile Include="sbSceneMananger.cpp" />
+    <ClCompile Include="sbSceneManager.cpp" />
     <ClCompile Include="sbSpriteRenderer.cpp" />
-    <ClCompile Include="sbSTAGE1.cpp" />
+    <ClCompile Include="sbMission1.cpp" />
     <ClCompile Include="sbTime.cpp" />
     <ClCompile Include="sbTitleScene.cpp" />
     <ClCompile Include="sbTransform.cpp" />

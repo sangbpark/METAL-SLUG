@@ -1,7 +1,7 @@
 #pragma once
 #include "sbScene.h"
 #include "sbGameObject.h"
-#include "sbSceneMananger.h"
+#include "sbSceneManager.h"
 
 namespace sb::object
 {
@@ -9,7 +9,7 @@ namespace sb::object
 	static __forceinline T* Instantiate(enums::eLayerType type)
 	{
 		T* gameObject = new T();
-		Scene* scene = SceneMananger::GetActiveScene();
+		Scene* scene = SceneManager::GetActiveScene();
 		scene->AddGameObject(type, gameObject);
 
 		return gameObject;

@@ -64,14 +64,23 @@
     <Filter Include="Content\GameObejct\Player">
       <UniqueIdentifier>{331f096b-1491-4247-9c5a-8bd367cb1681}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Content\Scene\STAGE1">
-      <UniqueIdentifier>{44282ea5-6802-4710-9c39-7732e37cd57c}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Resource">
       <UniqueIdentifier>{45c5a514-6d09-4d24-b396-7684f04aca5f}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Image">
+    <Filter Include="Texture">
       <UniqueIdentifier>{3ea1eae6-5f9f-435f-ae06-f208066e2091}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Content\GameObejct\BackGround">
+      <UniqueIdentifier>{e3378bc3-332a-4f4a-b9a4-ffbd88f67437}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Content\Scene\Mission1">
+      <UniqueIdentifier>{44282ea5-6802-4710-9c39-7732e37cd57c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Content\GameObejct\BackGround\BGDesert">
+      <UniqueIdentifier>{713910e5-0500-4530-9f6c-6b5b2105a1c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Content\GameObejct\BackGround\BGMDesert">
+      <UniqueIdentifier>{cf47c3da-d647-4362-81bd-50f48c5baae8}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -126,7 +135,7 @@
     <ClInclude Include="sbSpriteRenderer.h">
       <Filter>Engine\Component\SpriteRenderer</Filter>
     </ClInclude>
-    <ClInclude Include="sbSceneMananger.h">
+    <ClInclude Include="sbSceneManager.h">
       <Filter>Engine\Scene</Filter>
     </ClInclude>
     <ClInclude Include="sbObject.h">
@@ -138,8 +147,8 @@
     <ClInclude Include="sbPlayer.h">
       <Filter>Content\GameObejct\Player</Filter>
     </ClInclude>
-    <ClInclude Include="sbSTAGE1.h">
-      <Filter>Content\Scene\STAGE1</Filter>
+    <ClInclude Include="sbMission1.h">
+      <Filter>Content\Scene\Mission1</Filter>
     </ClInclude>
     <ClInclude Include="sbResource.h">
       <Filter>Resource</Filter>
@@ -147,8 +156,17 @@
     <ClInclude Include="sbResources.h">
       <Filter>Resource</Filter>
     </ClInclude>
-    <ClInclude Include="sbImage.h">
-      <Filter>Image</Filter>
+    <ClInclude Include="sbTexture.h">
+      <Filter>Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="sbBackGround.h">
+      <Filter>Content\GameObejct\BackGround</Filter>
+    </ClInclude>
+    <ClInclude Include="sbBGDesert.h">
+      <Filter>Content\GameObejct\BackGround\BGDesert</Filter>
+    </ClInclude>
+    <ClInclude Include="sbBGMDesert.h">
+      <Filter>Content\GameObejct\BackGround\BGMDesert</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -194,7 +212,7 @@
     <ClCompile Include="sbSpriteRenderer.cpp">
       <Filter>Engine\Component\SpriteRenderer</Filter>
     </ClCompile>
-    <ClCompile Include="sbSceneMananger.cpp">
+    <ClCompile Include="sbSceneManager.cpp">
       <Filter>Engine\Scene</Filter>
     </ClCompile>
     <ClCompile Include="sbTitleScene.cpp">
@@ -203,8 +221,8 @@
     <ClCompile Include="sbPlayer.cpp">
       <Filter>Content\GameObejct\Player</Filter>
     </ClCompile>
-    <ClCompile Include="sbSTAGE1.cpp">
-      <Filter>Content\Scene\STAGE1</Filter>
+    <ClCompile Include="sbMission1.cpp">
+      <Filter>Content\Scene\Mission1</Filter>
     </ClCompile>
     <ClCompile Include="sbResource.cpp">
       <Filter>Resource</Filter>
@@ -212,8 +230,20 @@
     <ClCompile Include="sbResources.cpp">
       <Filter>Resource</Filter>
     </ClCompile>
-    <ClCompile Include="sbImage.cpp">
-      <Filter>Image</Filter>
+    <ClCompile Include="sbTexture.cpp">
+      <Filter>Texture</Filter>
+    </ClCompile>
+    <ClCompile Include="sbMath.cpp">
+      <Filter>Engine\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="sbBackGround.cpp">
+      <Filter>Content\GameObejct\BackGround</Filter>
+    </ClCompile>
+    <ClCompile Include="sbBGDesert.cpp">
+      <Filter>Content\GameObejct\BackGround\BGDesert</Filter>
+    </ClCompile>
+    <ClCompile Include="sbBGMDesert.cpp">
+      <Filter>Content\GameObejct\BackGround\BGMDesert</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
