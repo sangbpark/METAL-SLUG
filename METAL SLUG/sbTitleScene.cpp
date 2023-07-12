@@ -29,7 +29,7 @@ namespace sb
 	void TitleScene::Update()
 	{
 		Scene::Update();
-		if (Input::GetKeyDown(eKeyCode::H))
+		if (Input::GetKeyDown(eKeyCode::ESC))
 		{
 			SceneManager::LoadScene(L"Mission1");
 		}
