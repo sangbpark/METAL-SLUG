@@ -45,9 +45,9 @@ namespace sb
 			float FirstPositionbottom;
 		};
 
-		static void Initailize();
-		static void Update();
-		static void Render(HDC hdc);
+		void Initailize();
+		void Update();
+		void Render(HDC hdc);
 	private:
 		static std::vector<Direct> mDirect;
 		static std::vector< FirstPosition> mFirstPosition;

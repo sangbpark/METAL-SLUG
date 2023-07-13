@@ -5,6 +5,7 @@
 
 namespace sb
 {
+	math::Vector2 Player::mPlayposition = {};
 	Player::Player()
 	{
 	}
@@ -40,6 +41,7 @@ namespace sb
 		}
 
 		tr->SetPosition(pos);
+		mPlayposition = pos;
 	}
 	void Player::Render(HDC hdc)
 	{

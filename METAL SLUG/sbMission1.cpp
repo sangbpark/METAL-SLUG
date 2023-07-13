@@ -13,6 +13,7 @@
 #include "sbFrontBackGround.h"
 #include "sbMiddleBoss.h"
 #include "sbOldMan.h"
+#include "sbCameraPlayer.h"
 
 namespace sb
 {
@@ -193,7 +194,7 @@ namespace sb
 		SpriteRenderer* Psr2 = playerbottom->AddComponent<SpriteRenderer>();
 		Transform* ptr2 = playerbottom->GetComponent<Transform>();
 		Vector2 ppos2 = ptr2->GetPosition();
-		ppos2.x = 100.0f;
+		ppos2.x = 600.0f;
 		ppos2.y = 590.0f;
 		ptr2->SetPosition(ppos2);
 		Psr2->SetImage(imagePlayerBottom);
@@ -202,14 +203,26 @@ namespace sb
 		SpriteRenderer* Psr = playerTop->AddComponent<SpriteRenderer>();
 		Transform* ptr = playerTop->GetComponent<Transform>();
 		Vector2 ppos = ptr->GetPosition();
-		ppos.x = 100.0f;
+		ppos.x = 600.0f;
 		ppos.y = 560.0f;
 		ptr->SetPosition(ppos);
 		Psr->SetImage(imagePlayerTop);
 		Psr->SetScale(Vector2(4.1f, 3.5f));
+
+		Texture* imageCameraPlayer = Resources::Load<Texture>(L"CameraPlayer"
+			, L"..\\Resource\\Character\\Dev.png");
+		CameraPlayer* cameraplayer = object::Instantiate<CameraPlayer>(enums::eLayerType::Player);
+		SpriteRenderer* cpsr = cameraplayer->AddComponent<SpriteRenderer>();
+		Transform* cptr = cameraplayer->GetComponent<Transform>();
+		Vector2 cpos = cptr->GetPosition();
+		cpos.x = 600.0f;
+		cpos.y = 400.0f;
+		cptr->SetPosition(cpos);
+		cpsr->SetImage(imageCameraPlayer);
+		cpsr->SetScale(Vector2(4.1f, 3.5f));
 	
 		
-		Camera::SetTarget(playerTop);
+		Camera::SetTarget(cameraplayer);
 
 	}
 	void Mission1::Update()

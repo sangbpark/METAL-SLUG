@@ -15,9 +15,9 @@ namespace sb::enums
 	enum class eLayerType
 	{
 		Backgroud,
-		Player,
 		Monster,
 		Npc,
+		Player,
 		Effect,
 		FrontBackGround,
 		UI,

@@ -103,6 +103,9 @@
     <Filter Include="Content\GameObejct\Npc\OldMan">
       <UniqueIdentifier>{6d9966b2-7f38-47a0-98de-a1d2e56126fe}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Content\GameObejct\CameraPlayer">
+      <UniqueIdentifier>{de542601-548c-43ee-a87e-5e16f0c9f605}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h">
@@ -210,6 +213,9 @@
     <ClInclude Include="sbOldMan.h">
       <Filter>Content\GameObejct\Npc\OldMan</Filter>
     </ClInclude>
+    <ClInclude Include="sbCameraPlayer.h">
+      <Filter>Content\GameObejct\CameraPlayer</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="METAL SLUG.ico">
@@ -307,6 +313,9 @@
     </ClCompile>
     <ClCompile Include="sbOldMan.cpp">
       <Filter>Content\GameObejct\Npc\OldMan</Filter>
+    </ClCompile>
+    <ClCompile Include="sbCameraPlayer.cpp">
+      <Filter>Content\GameObejct\CameraPlayer</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

@@ -17,6 +17,7 @@ namespace sb
 		void SetPosition(Vector2 Postion) { mPosition = Postion; }
 		Vector2 GetPosition() { return mPosition; }
 
+
 	private:
 		Vector2 mPosition;
 	};
