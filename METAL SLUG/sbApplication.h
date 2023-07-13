@@ -17,7 +17,8 @@ namespace sb
 		void Render();
 
 		HWND GetHwnd() { return mHwnd; }
-
+		UINT GetWidth() { return mWidth; }
+		UINT GetHeight() { return mHeight; }
 		HDC GetHdc() {	return mHdc;}
 
 	private:

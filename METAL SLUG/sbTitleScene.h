@@ -1,6 +1,6 @@
 #pragma once
 #include "sbScene.h"
-
+#include "sbGameObject.h"
 
 namespace sb
 {
@@ -17,7 +17,7 @@ namespace sb
 
 
 	private:
-
+	
 	};
 }
 

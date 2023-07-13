@@ -17,7 +17,9 @@ namespace sb::enums
 		Backgroud,
 		Player,
 		Monster,
+		Npc,
 		Effect,
+		FrontBackGround,
 		UI,
 		End,
 	};

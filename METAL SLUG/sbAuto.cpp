@@ -3,6 +3,7 @@
 
 namespace sb
 {
+	
 	std::vector<Auto::Direct> Auto::mDirect = {};
 	std::vector<math::Vector2> Auto::mAuto = {};
 	std::vector<Auto::FirstPosition> Auto::mFirstPosition;

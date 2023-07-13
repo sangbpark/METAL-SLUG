@@ -16,3 +16,7 @@ namespace sb
 	private:
 	};
 }
+
+class BGMDesert
+{
+};

@@ -4,7 +4,7 @@
 #include "sbSceneManager.h"
 #include "sbTitleScene.h"
 #include "sbMission1.h"
-
+#include "sbCamera.h"
 
 namespace sb
 {
@@ -26,8 +26,8 @@ namespace sb
 		mHwnd = hWnd;
 		mHdc = GetDC(mHwnd);
 
-		mWidth = 1325;
-		mHeight = 990;
+		mWidth = 1320;
+		mHeight = 740;
 
 		RECT rect = { 0,0,mWidth,mHeight };
 		AdjustWindowRect(&rect, WS_OVERLAPPEDWINDOW, false);
@@ -49,6 +49,7 @@ namespace sb
 
 		Time::Initailize();
 		Input::Initailize();
+		Camera::Initialize();
 
 		SceneManager::Initialize();
 
@@ -63,6 +64,7 @@ namespace sb
 	{
 		Time::Update();
 		Input::Update();
+		Camera::Update();
 		
 		SceneManager::Update();
 	

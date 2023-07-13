@@ -80,7 +80,28 @@
       <UniqueIdentifier>{713910e5-0500-4530-9f6c-6b5b2105a1c2}</UniqueIdentifier>
     </Filter>
     <Filter Include="Content\GameObejct\BackGround\BGMDesert">
-      <UniqueIdentifier>{cf47c3da-d647-4362-81bd-50f48c5baae8}</UniqueIdentifier>
+      <UniqueIdentifier>{2ff87f37-c66e-4dbf-90fd-18f2a0d39613}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Camera">
+      <UniqueIdentifier>{678ae7d1-d145-4557-9b02-cc497a837e31}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Content\GameObejct\Dev">
+      <UniqueIdentifier>{a5b290d5-7ad3-447c-b763-6d0d8666f43e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Content\GameObejct\FrontBackGround">
+      <UniqueIdentifier>{5075f4f7-ae76-4396-aa9c-77ee1b1dbce1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Content\GameObejct\Monster">
+      <UniqueIdentifier>{1b0f398f-fd10-4691-a0ee-8371fb56bb89}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Content\GameObejct\Monster\MiddleBoss">
+      <UniqueIdentifier>{ea5b8c97-bbd5-4a89-9e7d-60f3faf63a34}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Content\GameObejct\Npc">
+      <UniqueIdentifier>{7a7cf869-6fad-4c76-b66a-27157a0b7223}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Content\GameObejct\Npc\OldMan">
+      <UniqueIdentifier>{6d9966b2-7f38-47a0-98de-a1d2e56126fe}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -168,6 +189,27 @@
     <ClInclude Include="sbBGMDesert.h">
       <Filter>Content\GameObejct\BackGround\BGMDesert</Filter>
     </ClInclude>
+    <ClInclude Include="sbCamera.h">
+      <Filter>Engine\Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="sbDev.h">
+      <Filter>Content\GameObejct\Dev</Filter>
+    </ClInclude>
+    <ClInclude Include="sbFrontBackGround.h">
+      <Filter>Content\GameObejct\FrontBackGround</Filter>
+    </ClInclude>
+    <ClInclude Include="sbMonster.h">
+      <Filter>Content\GameObejct\Monster</Filter>
+    </ClInclude>
+    <ClInclude Include="sbMiddleBoss.h">
+      <Filter>Content\GameObejct\Monster\MiddleBoss</Filter>
+    </ClInclude>
+    <ClInclude Include="sbNpc.h">
+      <Filter>Content\GameObejct\Npc</Filter>
+    </ClInclude>
+    <ClInclude Include="sbOldMan.h">
+      <Filter>Content\GameObejct\Npc\OldMan</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="METAL SLUG.ico">
@@ -244,6 +286,27 @@
     </ClCompile>
     <ClCompile Include="sbBGMDesert.cpp">
       <Filter>Content\GameObejct\BackGround\BGMDesert</Filter>
+    </ClCompile>
+    <ClCompile Include="sbCamera.cpp">
+      <Filter>Engine\Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="sbDev.cpp">
+      <Filter>Content\GameObejct\Dev</Filter>
+    </ClCompile>
+    <ClCompile Include="sbFrontBackGround.cpp">
+      <Filter>Content\GameObejct\FrontBackGround</Filter>
+    </ClCompile>
+    <ClCompile Include="sbMonster.cpp">
+      <Filter>Content\GameObejct\Monster</Filter>
+    </ClCompile>
+    <ClCompile Include="sbMiddleBoss.cpp">
+      <Filter>Content\GameObejct\Monster\MiddleBoss</Filter>
+    </ClCompile>
+    <ClCompile Include="sbNpc.cpp">
+      <Filter>Content\GameObejct\Npc</Filter>
+    </ClCompile>
+    <ClCompile Include="sbOldMan.cpp">
+      <Filter>Content\GameObejct\Npc\OldMan</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
