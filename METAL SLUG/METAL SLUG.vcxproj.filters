@@ -106,6 +106,18 @@
     <Filter Include="Content\GameObejct\CameraPlayer">
       <UniqueIdentifier>{de542601-548c-43ee-a87e-5e16f0c9f605}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Resource\Animation">
+      <UniqueIdentifier>{e77a8bd1-a157-412d-8033-287716116263}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Component\Animator">
+      <UniqueIdentifier>{00e2aefc-c196-4124-8939-129c8aeb9d7a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Content\GameObejct\Player\PlayerTop">
+      <UniqueIdentifier>{aaa10e75-f191-4798-9960-c2ed95e0a02d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Content\GameObejct\Player\PlayerBottom">
+      <UniqueIdentifier>{6fb92dfe-60ab-4a8b-aa86-f6ecaf8a4397}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h">
@@ -216,6 +228,18 @@
     <ClInclude Include="sbCameraPlayer.h">
       <Filter>Content\GameObejct\CameraPlayer</Filter>
     </ClInclude>
+    <ClInclude Include="sbAnimation.h">
+      <Filter>Resource\Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="sbAnimator.h">
+      <Filter>Engine\Component\Animator</Filter>
+    </ClInclude>
+    <ClInclude Include="sbPlayerTop.h">
+      <Filter>Content\GameObejct\Player\PlayerTop</Filter>
+    </ClInclude>
+    <ClInclude Include="sbPlayerBottom.h">
+      <Filter>Content\GameObejct\Player\PlayerBottom</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="METAL SLUG.ico">
@@ -316,6 +340,18 @@
     </ClCompile>
     <ClCompile Include="sbCameraPlayer.cpp">
       <Filter>Content\GameObejct\CameraPlayer</Filter>
+    </ClCompile>
+    <ClCompile Include="sbAnimation.cpp">
+      <Filter>Resource\Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="sbAnimator.cpp">
+      <Filter>Engine\Component\Animator</Filter>
+    </ClCompile>
+    <ClCompile Include="sbPlayerTop.cpp">
+      <Filter>Content\GameObejct\Player\PlayerTop</Filter>
+    </ClCompile>
+    <ClCompile Include="sbPlayerBottom.cpp">
+      <Filter>Content\GameObejct\Player\PlayerBottom</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

@@ -131,6 +131,8 @@
   <ItemGroup>
     <ClInclude Include="framework.h" />
     <ClInclude Include="METAL SLUG.h" />
+    <ClInclude Include="sbAnimation.h" />
+    <ClInclude Include="sbAnimator.h" />
     <ClInclude Include="sbBackGround.h" />
     <ClInclude Include="sbBGDesert.h" />
     <ClInclude Include="sbBGMDesert.h" />
@@ -142,6 +144,8 @@
     <ClInclude Include="sbMonster.h" />
     <ClInclude Include="sbNpc.h" />
     <ClInclude Include="sbOldMan.h" />
+    <ClInclude Include="sbPlayerBottom.h" />
+    <ClInclude Include="sbPlayerTop.h" />
     <ClInclude Include="sbTexture.h" />
     <ClInclude Include="sbObject.h" />
     <ClInclude Include="Resource.h" />
@@ -170,6 +174,8 @@
     <ClCompile Include="main.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="sbAnimation.cpp" />
+    <ClCompile Include="sbAnimator.cpp" />
     <ClCompile Include="sbApplication.cpp" />
     <ClCompile Include="sbAuto.cpp" />
     <ClCompile Include="sbBackGround.cpp" />
@@ -187,6 +193,8 @@
     <ClCompile Include="sbMonster.cpp" />
     <ClCompile Include="sbNpc.cpp" />
     <ClCompile Include="sbOldMan.cpp" />
+    <ClCompile Include="sbPlayerBottom.cpp" />
+    <ClCompile Include="sbPlayerTop.cpp" />
     <ClCompile Include="sbTexture.cpp" />
     <ClCompile Include="sbInput.cpp" />
     <ClCompile Include="sbLayer.cpp" />

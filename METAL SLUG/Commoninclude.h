@@ -5,6 +5,8 @@
 #include <set>
 #include <functional>
 #include <string>
+#include <filesystem>
+
 #include "framework.h"
 #include "sbMath.h"
 
@@ -27,6 +29,7 @@ namespace sb::enums
 	{
 		Transform,
 		SpriteRenderer,
+		Animator,
 		End,
 	};
 }

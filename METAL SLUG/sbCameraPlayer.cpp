@@ -1,6 +1,6 @@
 #include "sbCameraPlayer.h"
 #include "sbTransform.h"
-#include "sbPlayer.h"
+#include "sbPlayerTop.h"
 #include "sbInput.h"
 #include "sbTime.h"
 
@@ -23,7 +23,7 @@ namespace sb
 		GameObject::Update();
 
 		Transform* tr = GetComponent<Transform>();
-		math::Vector2 pos = Player::GetPlayerPosition();
+		math::Vector2 pos = PlayerTop::GetPlayerPosition();
 		math::Vector2 pos2 = tr->GetPosition();
 
 		pos.y = pos2.y;

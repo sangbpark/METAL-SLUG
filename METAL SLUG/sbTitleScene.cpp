@@ -29,7 +29,7 @@ namespace sb
 		pos.x = 690.0f;
 		pos.y = 650.0f;
 		tr->SetPosition(pos);
-		sr->SetAffectCamera(false);
+		sr->SetAffectedCamera(false);
 		sr->SetImage(image);
 		sr->SetScale(Vector2(0.92f, 0.7f));
 

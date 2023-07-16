@@ -22,7 +22,6 @@ namespace sb
 	void Camera::Update()
 	{
 
-
 		if (mTarget)
 		{
 			Transform* tr = mTarget->GetComponent<Transform>();
