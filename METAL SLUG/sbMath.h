@@ -25,6 +25,16 @@ namespace sb::math
 		{
 
 		}
+
+		Vector2 operator+(const Vector2 other)
+		{
+			Vector2 temp;
+			temp.x = x + other.x;
+			temp.y = y + other.y;
+
+			return temp;
+		}
+
 		Vector2 operator-(const Vector2 other)
 		{
 			Vector2 temp;
@@ -33,6 +43,7 @@ namespace sb::math
 
 			return temp;
 		}
+
 		Vector2 operator/(const float value)
 		{
 			Vector2 temp;

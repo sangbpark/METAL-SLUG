@@ -134,6 +134,7 @@
     <ClInclude Include="sbAnimation.h" />
     <ClInclude Include="sbAnimator.h" />
     <ClInclude Include="sbBackGround.h" />
+    <ClInclude Include="sbBGbossCanopi.h" />
     <ClInclude Include="sbBGDesert.h" />
     <ClInclude Include="sbBGMDesert.h" />
     <ClInclude Include="sbCamera.h" />
@@ -179,6 +180,7 @@
     <ClCompile Include="sbApplication.cpp" />
     <ClCompile Include="sbAuto.cpp" />
     <ClCompile Include="sbBackGround.cpp" />
+    <ClCompile Include="sbBGbossCanopi.cpp" />
     <ClCompile Include="sbBGDesert.cpp" />
     <ClCompile Include="sbBGMDesert.cpp" />
     <ClCompile Include="sbCamera.cpp" />

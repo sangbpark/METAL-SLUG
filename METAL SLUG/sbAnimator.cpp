@@ -7,6 +7,7 @@ namespace sb
 	Animator::Animator()
 		: Component(sb::enums::eComponentType::Animator)
 		, mAlpha(1.0f)
+		, mScale(Vector2::One)
 	{
 	}
 	Animator::~Animator()

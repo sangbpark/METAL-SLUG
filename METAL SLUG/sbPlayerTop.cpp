@@ -27,25 +27,44 @@ namespace sb
 
 		if (Input::GetKey(eKeyCode::W))
 		{
-			pos.y -= 300.0f * Time::DeltaTime();
+			pos.y -= 1000.0f * Time::DeltaTime();
 		}
 		if (Input::GetKey(eKeyCode::A))
 		{
-			pos.x -= 300.0f * Time::DeltaTime();
+			pos.x -= 1000.0f * Time::DeltaTime();
 		}
 		if (Input::GetKey(eKeyCode::S))
 		{
-			pos.y += 300.0f * Time::DeltaTime();
+			pos.y += 1000.0f * Time::DeltaTime();
 		}
 		if (Input::GetKey(eKeyCode::D))
 		{
 
-			pos.x += 300.0f * Time::DeltaTime();
+			pos.x += 1000.0f * Time::DeltaTime();
 		
 		}
-		if (Input::GetKey(eKeyCode::ZERO))
+		if (Input::GetKeyDown(eKeyCode::D))
+		{
+			anim->PlayAnimation(L"PlayerrightTAX", true);
+		}
+		if (Input::GetKeyUp(eKeyCode::D))
+		{
+			anim->PlayAnimation(L"PlayerIdlerightTAX", true);
+		}
+
+		if (Input::GetKeyDown(eKeyCode::A))
+		{
+			anim->PlayAnimation(L"PlayerleftTAX", true);
+		}
+		if (Input::GetKeyUp(eKeyCode::A))
+		{
+			anim->PlayAnimation(L"PlayerIdleleftTAX", true);
+		}
+
+		if (Input::GetKeyDown(eKeyCode::ZERO))
 		{
 			anim->PlayAnimation(L"PlayerdeadTAX", true);
+
 		}
 
 		tr->SetPosition(pos);

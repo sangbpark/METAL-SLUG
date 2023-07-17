@@ -26,8 +26,8 @@ namespace sb
 		mHwnd = hWnd;
 		mHdc = GetDC(mHwnd);
 
-		mWidth = 1320;
-		mHeight = 740;
+		mWidth = 1280;
+		mHeight = 960;
 
 		RECT rect = { 0,0,mWidth,mHeight };
 		AdjustWindowRect(&rect, WS_OVERLAPPEDWINDOW, false);

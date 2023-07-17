@@ -118,6 +118,9 @@
     <Filter Include="Content\GameObejct\Player\PlayerBottom">
       <UniqueIdentifier>{6fb92dfe-60ab-4a8b-aa86-f6ecaf8a4397}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Content\GameObejct\BackGround\BGbossCanopi">
+      <UniqueIdentifier>{d68491ed-e39b-490b-9203-979f84f3435a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h">
@@ -240,6 +243,9 @@
     <ClInclude Include="sbPlayerBottom.h">
       <Filter>Content\GameObejct\Player\PlayerBottom</Filter>
     </ClInclude>
+    <ClInclude Include="sbBGbossCanopi.h">
+      <Filter>Content\GameObejct\BackGround\BGbossCanopi</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="METAL SLUG.ico">
@@ -352,6 +358,9 @@
     </ClCompile>
     <ClCompile Include="sbPlayerBottom.cpp">
       <Filter>Content\GameObejct\Player\PlayerBottom</Filter>
+    </ClCompile>
+    <ClCompile Include="sbBGbossCanopi.cpp">
+      <Filter>Content\GameObejct\BackGround\BGbossCanopi</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
