@@ -67,6 +67,8 @@ namespace sb
 
 		}
 
+
+
 		tr->SetPosition(pos);
 	
 	}

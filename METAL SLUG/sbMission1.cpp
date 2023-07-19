@@ -50,7 +50,7 @@ namespace sb
 			, L"..\\Resource\\Map\\Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 1-mbackdesert.bmp");
 		BGMDesert* M1BackGroundMDesert1 = object::Instantiate<BGMDesert>(enums::eLayerType::Backgroud);
 		Transform* BGDMtr1 = M1BackGroundMDesert1->GetComponent<Transform>();
-		BGDMtr1->SetPosition(Vector2(620.0f, 325.0f));
+		BGDMtr1->SetPosition(Vector2(500.0f, 325.0f));
 		Animator* BGDat1 = M1BackGroundMDesert1->AddComponent<Animator>();
 		BGDat1->CreateAnimation(L"Mission1BackGroundMDesert1AY", imageMDesert
 			, Vector2(0.0f, 0.0f), Vector2(249.0f, 35.0f), 4);
@@ -58,7 +58,7 @@ namespace sb
 		BGDat1->PlayAnimation(L"Mission1BackGroundMDesert1AY",true);
 		BGMDesert* M1BackGroundMDesert2 = object::Instantiate<BGMDesert>(enums::eLayerType::Backgroud);
 		Transform* BGDMtr2 = M1BackGroundMDesert2->GetComponent<Transform>();
-		BGDMtr2->SetPosition(Vector2(1700.0f, 325.0f));
+		BGDMtr2->SetPosition(Vector2(1580.0f, 325.0f));
 		Animator* BGDat2 = M1BackGroundMDesert2->AddComponent<Animator>();
 		BGDat2->CreateAnimation(L"Mission1BackGroundMDesert2AY", imageMDesert
 			, Vector2(0.0f, 0.0f), Vector2(249.0f, 35.0f), 4);
@@ -66,7 +66,7 @@ namespace sb
 		BGDat2->PlayAnimation(L"Mission1BackGroundMDesert2AY", true);
 		BGMDesert* M1BackGroundMDesert3 = object::Instantiate<BGMDesert>(enums::eLayerType::Backgroud);
 		Transform* BGDMtr3 = M1BackGroundMDesert3->GetComponent<Transform>();
-		BGDMtr3->SetPosition(Vector2(2780.0f, 325.0f));
+		BGDMtr3->SetPosition(Vector2(2670.0f, 325.0f));
 		Animator* BGDat3 = M1BackGroundMDesert3->AddComponent<Animator>();
 		BGDat3->CreateAnimation(L"Mission1BackGroundMDesert3AY", imageMDesert
 			, Vector2(0.0f, 0.0f), Vector2(249.0f, 35.0f), 4);
@@ -74,7 +74,7 @@ namespace sb
 		BGDat3->PlayAnimation(L"Mission1BackGroundMDesert3AY", true);
 		BGMDesert* M1BackGroundMDesert4 = object::Instantiate<BGMDesert>(enums::eLayerType::Backgroud);
 		Transform* BGDMtr4 = M1BackGroundMDesert4->GetComponent<Transform>();
-		BGDMtr4->SetPosition(Vector2(3860.0f, 325.0f));
+		BGDMtr4->SetPosition(Vector2(3750.0f, 325.0f));
 		Animator* BGDat4 = M1BackGroundMDesert4->AddComponent<Animator>();
 		BGDat4->CreateAnimation(L"Mission1BackGroundMDesert4AY", imageMDesert
 			, Vector2(0.0f, 0.0f), Vector2(249.0f, 35.0f), 4);
@@ -107,7 +107,7 @@ namespace sb
 			, L"..\\Resource\\Map\\Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 1 bossground.bmp");
 		BackGround* M1BackGroundboss = object::Instantiate<BackGround>(enums::eLayerType::Backgroud);
 		Transform* BGBtr = M1BackGroundboss->GetComponent<Transform>();
-		BGBtr->SetPosition(Vector2(16610.0f, 293.0f));
+		BGBtr->SetPosition(Vector2(16460.0f, 190.0f));
 		Animator* BGBat = M1BackGroundboss->AddComponent<Animator>();
 		BGBat->CreateAnimation(L"mission1bossbackgroundAX", imageBGboss
 			, Vector2(0.0f, 0.0f), Vector2(307.0f, 208.0f), 4);
@@ -118,7 +118,7 @@ namespace sb
 			, L"..\\Resource\\Map\\Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 1canopy.bmp");
 		BGbossCanopi* bgbosscanopi = object::Instantiate<BGbossCanopi>(enums::eLayerType::Backgroud);
 		Transform* BGCtr = bgbosscanopi->GetComponent<Transform>();
-		BGCtr->SetPosition(Vector2(15830.0f, 260.0f));
+		BGCtr->SetPosition(Vector2(15740.0f, 230.0f));
 		Animator* BGCat = bgbosscanopi->AddComponent<Animator>();
 		BGCat->CreateAnimation(L"bosscanopiAY", imageBGbossCanopi
 			, Vector2(0.0f, 0.0f), Vector2(180.0f, 63.0f), 3);
@@ -128,7 +128,7 @@ namespace sb
 
 		BGbossCanopi* bgbosscanopi2 = object::Instantiate<BGbossCanopi>(enums::eLayerType::Backgroud);
 		Transform* BGCtr2 = bgbosscanopi2->GetComponent<Transform>();
-		BGCtr2->SetPosition(Vector2(17000.0f, 250.0f));
+		BGCtr2->SetPosition(Vector2(16960.0f, 250.0f));
 		Animator* BGCat2 = bgbosscanopi2->AddComponent<Animator>();
 		BGCat2->CreateAnimation(L"bosscanopi2AY", imageBGbossCanopi
 			, Vector2(825.0f, 0.0f), Vector2(89.0f, 63.0f), 3);
@@ -168,22 +168,22 @@ namespace sb
 			, L"..\\Resource\\Npc\\Neo Geo NGCD - Metal Slug 2 Metal Slug X - POWs Helpful NPCs.bmp");
 		OldMan* NpcOldMan1 = object::Instantiate<OldMan>(enums::eLayerType::Npc);
 		Transform* OMtr1 = NpcOldMan1->GetComponent<Transform>();
-		OMtr1->SetPosition(Vector2(2850.0f, 320.0f));
+		OMtr1->SetPosition(Vector2(2850.0f, 300.0f));
 		Animator* OMat1 = NpcOldMan1->AddComponent<Animator>();
 		OMat1->CreateAnimation(L"NpcOldManIdleAX", imageNpcOldMan, Vector2(0.0f, 11.0f), Vector2(44.0f, 42.0f), 2);
 		OMat1->SetScale(Vector2(4.5f, 4.5f));
 		OMat1->PlayAnimation(L"NpcOldManIdleAX",true);
-		
+	
 
 
 
 		OldMan* NpcOldMan2 = object::Instantiate<OldMan>(enums::eLayerType::Npc);
 		Transform* OMtr2 = NpcOldMan2->GetComponent<Transform>();
-		OMtr2->SetPosition(Vector2(6200.0f, 235.0f));
+		OMtr2->SetPosition(Vector2(6200.0f, 210.0f));
 		Animator* OMat2 = NpcOldMan2->AddComponent<Animator>();
-		OMat2->CreateAnimation(L"NpcOldManIdle2AX", imageNpcOldMan, Vector2(0.0f, 11.0f), Vector2(44.0f, 42.0f), 2);
+		OMat2->CreateAnimation(L"NpcOldManIdleAX", imageNpcOldMan, Vector2(0.0f, 11.0f), Vector2(44.0f, 42.0f), 2 );
 		OMat2->SetScale(Vector2(4.5f, 4.5f));
-		OMat2->PlayAnimation(L"NpcOldManIdle2AX", true);
+		OMat2->PlayAnimation(L"NpcOldManIdleAX", true);
 		
 
 
@@ -222,9 +222,9 @@ namespace sb
 		ptr2->SetPosition(Vector2(600.0f, 500.0f));
 		Animator* pb = playerbottom->AddComponent<Animator>();
 		pb->CreateAnimation(L"PlayerIdlerightBAX", imagePlayer, Vector2(176.0f, 258.0f), Vector2(44.0f, 36.0f), 1);
-		pb->CreateAnimation(L"PlayerIdleleftBAX", imagePlayer, Vector2(0.0f, 299.0f), Vector2(44.0f, 36.0f), 1);
-		pb->CreateAnimation(L"PlayerrightBAX", imagePlayer, Vector2(0.0f, 506.0f), Vector2(44.0f, 25.0f), 12,Vector2(-3.0f,10.0f));
-		pb->CreateAnimation(L"PlayerleftBAX", imagePlayer, Vector2(0.0f, 425.0f), Vector2(44.0f, 25.0f), 12, Vector2(-3.0f, 10.0f));
+		pb->CreateAnimation(L"PlayerIdleleftBAX", imagePlayer, Vector2(0.0f, 299.0f), Vector2(44.0f, 36.0f), 1,Vector2(-35.0f, 0.0f));
+		pb->CreateAnimation(L"PlayerrightBAX", imagePlayer, Vector2(0.0f, 506.0f), Vector2(44.0f, 25.0f), 12,Vector2(-5.0f,25.0f));
+		pb->CreateAnimation(L"PlayerleftBAX", imagePlayer, Vector2(0.0f, 425.0f), Vector2(44.0f, 25.0f), 12, Vector2(-5.0f, 25.0f));
 		pb->CreateAnimation(L"PlayerdeadBAX", imagePlayer, Vector2(906.0f, 53.0f), Vector2(44.0f, 44.0f), 19, Vector2(5.0f, -4.0f));
 		pb->SetScale(Vector2(4.5f, 4.5f));
 		pb->PlayAnimation(L"PlayerIdlerightBAX", true);
@@ -234,9 +234,9 @@ namespace sb
 		ptr->SetPosition(Vector2(600.0f, 470.0f));
 		Animator* pt = playerTop->AddComponent<Animator>();
 		pt->CreateAnimation(L"PlayerIdlerightTAX", imagePlayer, Vector2(0.0f, 258.0f), Vector2(44.0f, 34.0f), 4);
-		pt->CreateAnimation(L"PlayerIdleleftTAX", imagePlayer, Vector2(44.0f, 299.0f), Vector2(44.0f, 34.0f), 4);
-		pt->CreateAnimation(L"PlayerrightTAX", imagePlayer, Vector2(0.0f, 472.0f), Vector2(44.0f, 34.0f), 12,Vector2(-3.0f, -7.0f));
-		pt->CreateAnimation(L"PlayerleftTAX", imagePlayer, Vector2(0.0f, 391.0f), Vector2(44.0f, 34.0f), 12, Vector2(-3.0f, -7.0f));
+		pt->CreateAnimation(L"PlayerIdleleftTAX", imagePlayer, Vector2(44.0f, 299.0f), Vector2(44.0f, 34.0f), 4, Vector2(-35.0f, 0.0f));
+		pt->CreateAnimation(L"PlayerrightTAX", imagePlayer, Vector2(0.0f, 472.0f), Vector2(44.0f, 34.0f), 12,Vector2(-5.0f, -7.0f));
+		pt->CreateAnimation(L"PlayerleftTAX", imagePlayer, Vector2(0.0f, 391.0f), Vector2(44.0f, 34.0f), 12, Vector2(-5.0f, -7.0f));
 		pt->CreateAnimation(L"PlayerdeadTAX", imagePlayer, Vector2(0.0f, 0.0f), Vector2(0.0f, 0.0f), 12, Vector2(-20.0f, -2.0f));
 		pt->SetScale(Vector2(4.5f, 4.5f));
 		pt->PlayAnimation(L"PlayerIdlerightTAX", true);

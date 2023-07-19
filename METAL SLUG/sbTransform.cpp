@@ -5,7 +5,8 @@
 namespace sb
 {
 	Transform::Transform()
-		:Component(enums::eComponentType::Transform)
+		: Component(enums::eComponentType::Transform)
+		, mRotation(0.0f)
 	{
 	}
 

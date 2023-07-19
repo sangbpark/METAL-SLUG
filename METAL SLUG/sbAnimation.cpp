@@ -42,9 +42,8 @@ namespace sb
 			return;
 
 		Sprite sprite = mSpriteSheet[mIndex];
-
 		Transform* tr = mAnimator->GetOwner()->GetComponent<Transform>();
-		Vector2 pos = tr->GetPosition() - (sprite.size / 2.0f) + sprite.offset;
+		Vector2 pos = tr->GetPosition();
 
 		Animator* animator = mAnimator;
 
@@ -55,7 +54,8 @@ namespace sb
 			, sprite.size
 			, sprite.offset
 			, animator->GetScale()
-			, animator->GetAlpha());
+			, animator->GetAlpha()
+			, tr->GetRotation());
 
 	}
 	void Animation::Create(const std::wstring& name

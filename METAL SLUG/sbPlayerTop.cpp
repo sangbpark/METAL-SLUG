@@ -66,7 +66,7 @@ namespace sb
 			anim->PlayAnimation(L"PlayerdeadTAX", true);
 
 		}
-
+		
 		tr->SetPosition(pos);
 		mPlayposition = pos;
 	}

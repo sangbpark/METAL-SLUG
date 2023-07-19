@@ -36,6 +36,7 @@ namespace sb
 			, Vector2(mTexture->GetWidth(), mTexture->GetHeight())
 			, Vector2::Zero
 			, mScale
-			, mAlpha);
+			, mAlpha
+			, tr->GetRotation());
 	}
 }

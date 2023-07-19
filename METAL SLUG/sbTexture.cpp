@@ -109,7 +109,8 @@ namespace sb
 		, Vector2 rightBottom
 		, Vector2 offset
 		, Vector2 scale
-		, float alpha)
+		, float alpha
+		, float rotate)
 	{
 		if (mBitmap == nullptr && mImage == nullptr)
 			return;
@@ -159,6 +160,11 @@ namespace sb
 				, Gdiplus::Color(255, 255, 255));
 
 			Gdiplus::Graphics graphics(hdc);
+			// 회전 어디를 중심으로
+			graphics.TranslateTransform((float)pos.x, (float)pos.y);
+			graphics.RotateTransform(rotate);
+			// 다시 원래대로
+			graphics.TranslateTransform(-(float)pos.x, -(float)pos.y);
 			graphics.DrawImage(mImage
 				, Gdiplus::Rect
 				(

@@ -32,7 +32,7 @@ namespace sb
 		if (mActiveAnimation)
 			mActiveAnimation->Render(hdc);
 	}
-	void Animator::CreateAnimation(const std::wstring& name
+	Animation* Animator::CreateAnimation(const std::wstring& name
 		, Texture* texture
 		, Vector2 leftTop, Vector2 size
 		, UINT spriteLength, Vector2 offset
@@ -41,8 +41,13 @@ namespace sb
 		Animation* animation = nullptr;
 		animation = Resources::Find<Animation>(name);
 		if (animation != nullptr)
-			return;
-
+		{	
+			animation->SetAnimator(this);
+			mAnimations.insert(std::make_pair(name, animation));
+			return animation;
+		}
+	
+		
 		animation = new Animation();
 		animation->Create(name, texture
 			, leftTop, size, offset
@@ -51,6 +56,7 @@ namespace sb
 
 		mAnimations.insert(std::make_pair(name, animation));
 		Resources::Insert<Animation>(name, animation);
+	
 	}
 	void Animator::CreateAnimationFolder(const std::wstring& name
 		, const std::wstring& path, Vector2 offset, float duration)
@@ -78,12 +84,17 @@ namespace sb
 			fileCout++;
 		}
 
-		Texture* spriteSheet = Texture::Create(name, width * fileCout, height);
+		std::wstring spriteSheetName = name + L"SpriteSheet";
+		Texture* spriteSheet
+			= Texture::Create(spriteSheetName, width * fileCout, height);
+		spriteSheet->SetType(eTextureType::Bmp);
 
 		int idx = 0;
 		for (Texture* image : images)
 		{
-			BitBlt(spriteSheet->GetHdc(), width * idx, 0
+			BitBlt(spriteSheet->GetHdc()
+				, (width * idx) + ((width - image->GetWidth()) / 2.0f)
+				, 0
 				, image->GetWidth(), image->GetHeight()
 				, image->GetHdc(), 0, 0, SRCCOPY);
 
