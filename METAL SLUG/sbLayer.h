@@ -19,6 +19,7 @@ namespace sb
 			mGameObjects.push_back(gameobj);
 		}
 
+		std::vector<GameObject*>& GetGameObjects() { return mGameObjects; }
 	private:
 		std::vector<GameObject*> mGameObjects;
 	};

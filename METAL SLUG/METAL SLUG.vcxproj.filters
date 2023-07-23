@@ -121,6 +121,12 @@
     <Filter Include="Content\GameObejct\BackGround\BGbossCanopi">
       <UniqueIdentifier>{d68491ed-e39b-490b-9203-979f84f3435a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Engine\Collision">
+      <UniqueIdentifier>{3e829216-91df-49f7-a0a4-1a5ab5ca8f58}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Component\Collider">
+      <UniqueIdentifier>{d169dc38-8b23-4d1b-918f-436638c7c21d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h">
@@ -246,6 +252,12 @@
     <ClInclude Include="sbBGbossCanopi.h">
       <Filter>Content\GameObejct\BackGround\BGbossCanopi</Filter>
     </ClInclude>
+    <ClInclude Include="sbCollisionManager.h">
+      <Filter>Engine\Collision</Filter>
+    </ClInclude>
+    <ClInclude Include="sbCollider.h">
+      <Filter>Engine\Component\Collider</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="METAL SLUG.ico">
@@ -361,6 +373,12 @@
     </ClCompile>
     <ClCompile Include="sbBGbossCanopi.cpp">
       <Filter>Content\GameObejct\BackGround\BGbossCanopi</Filter>
+    </ClCompile>
+    <ClCompile Include="sbCollisionManager.cpp">
+      <Filter>Engine\Collision</Filter>
+    </ClCompile>
+    <ClCompile Include="sbCollider.cpp">
+      <Filter>Engine\Component\Collider</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

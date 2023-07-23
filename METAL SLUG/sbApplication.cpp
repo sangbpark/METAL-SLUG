@@ -5,6 +5,7 @@
 #include "sbTitleScene.h"
 #include "sbMission1.h"
 #include "sbCamera.h"
+#include "sbCollisionManager.h"
 
 namespace sb
 {
@@ -50,7 +51,7 @@ namespace sb
 		Time::Initailize();
 		Input::Initailize();
 		Camera::Initialize();
-
+		CollisionManager::Initialize();
 		SceneManager::Initialize();
 
 		
@@ -64,8 +65,7 @@ namespace sb
 	{
 		Time::Update();
 		Input::Update();
-		Camera::Update();
-		
+		CollisionManager::Update();
 		SceneManager::Update();
 	
 	}
@@ -74,7 +74,7 @@ namespace sb
 		Rectangle(mBackHdc, -1, -1, mWidth + 1, mHeight + 1);
 
 		Time::Render(mBackHdc);
-		
+		CollisionManager::Render(mBackHdc);
 		SceneManager::Render(mBackHdc);
 
 		BitBlt(mHdc, 0, 0, mWidth, mHeight

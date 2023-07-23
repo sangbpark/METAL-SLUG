@@ -20,6 +20,8 @@ namespace sb
 			mLayers[(int)type].AddGameObject(gameObj);
 		}
 
+		Layer& GetLayer(enums::eLayerType type) { return mLayers[(UINT)type]; }
+
 	private:
 		std::vector<Layer> mLayers;
 	};

@@ -139,6 +139,8 @@
     <ClInclude Include="sbBGMDesert.h" />
     <ClInclude Include="sbCamera.h" />
     <ClInclude Include="sbCameraPlayer.h" />
+    <ClInclude Include="sbCollider.h" />
+    <ClInclude Include="sbCollisionManager.h" />
     <ClInclude Include="sbDev.h" />
     <ClInclude Include="sbFrontBackGround.h" />
     <ClInclude Include="sbMiddleBoss.h" />
@@ -185,6 +187,8 @@
     <ClCompile Include="sbBGMDesert.cpp" />
     <ClCompile Include="sbCamera.cpp" />
     <ClCompile Include="sbCameraPlayer.cpp" />
+    <ClCompile Include="sbCollider.cpp" />
+    <ClCompile Include="sbCollisionManager.cpp" />
     <ClCompile Include="sbComponent.cpp" />
     <ClCompile Include="sbDev.cpp" />
     <ClCompile Include="sbEntity.cpp" />

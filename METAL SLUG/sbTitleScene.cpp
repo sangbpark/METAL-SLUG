@@ -7,6 +7,7 @@
 #include "sbBackGround.h"
 #include "sbInput.h"
 #include "sbTransform.h"
+#include "sbCamera.h"
 
 namespace sb
 {
@@ -33,7 +34,7 @@ namespace sb
 		sr->SetImage(image);
 		sr->SetScale(Vector2(0.92f, 0.7f));
 
-	
+		Camera::SetTarget(TitleBackGround);
 	}
 	void TitleScene::Update()
 	{
@@ -42,6 +43,7 @@ namespace sb
 		{
 			SceneManager::LoadScene(L"Mission1");
 		}
+		Camera::Update();
 	}
 	void TitleScene::Render(HDC hdc)
 	{
